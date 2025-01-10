@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Integrity Education</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, #3B82F6, #60A5FA) border-box;
+            border: 2px solid transparent;
+            transition: transform 0.3s ease;
+        }
+
+        .gradient-border:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(120deg, #1E3A8A 0%, #2563EB 100%);
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #60A5FA;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="glass-effect fixed w-full z-50 text-white hero-gradient">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold">Sports Integrity</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="nav-link px-3 py-2 text-white">Home</a>
+                        <a href="#" class="nav-link px-3 py-2 text-white">Programs</a>
+                        <a href="#" class="nav-link px-3 py-2 text-white">Resources</a>
+                        <a href="#" class="nav-link px-3 py-2 text-white">About</a>
+                        <a href="#" class="nav-link px-3 py-2 text-white">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-7xl mx-auto px-4 py-2 mt-16">
+        <div class="flex items-center text-sm text-gray-600 animate-fade-in">
+            <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-900">Integrity Education</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 py-24">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-5xl font-bold mb-6 animate-float">
+                    Revolutionizing Integrity Education in Sports
+                </h1>
+                <p class="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+                    Empowering athletes and sports professionals with comprehensive integrity education programs.
+                </p>
+                <div class="mt-8">
+                    <a href="#" class="inline-block px-8 py-3 bg-white text-blue-900 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 -mt-16">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Program Card -->
+            <div class="glass-effect rounded-xl p-8 card-hover">
+                <div class="text-blue-600 mb-4">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Educational Programs</h3>
+                <p class="text-gray-600 mb-6">Comprehensive courses designed for athletes, coaches, and sports administrators.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                    Learn more 
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Resources Card -->
+            <div class="glass-effect rounded-xl p-8 card-hover">
+                <div class="text-blue-600 mb-4">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Training Resources</h3>
+                <p class="text-gray-600 mb-6">Access materials and tools to enhance understanding of sports integrity.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                    Explore resources
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="glass-effect rounded-xl p-8 card-hover">
+                <div class="text-blue-600 mb-4">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Get Started</h3>
+                <p class="text-gray-600 mb-6">Connect with our team to implement integrity education in your organization.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                    Contact us
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-24">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="animate-fade-in">
+                    <h4 class="text-lg font-semibold mb-4">About Us</h4>
+                    <p class="text-gray-400">Dedicated to promoting integrity in sports through education and training.</p>
+                </div>
+                <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="animate-fade-in" style="animation-delay: 0.4s;">
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@sportsintegrity.org</li>
+                        <li>Phone: ++44 123-4567</li>
+                    </ul>
+                </div>
+                <div class="animate-fade-in" style="animation-delay: 0.6s;">
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
